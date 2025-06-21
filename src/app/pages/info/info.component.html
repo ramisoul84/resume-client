@@ -1,0 +1,23 @@
+<div id="info">
+    <div>
+        {{total}}
+    </div>
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registerd At</th>
+            <th>Last Login</th>
+        </thead>
+        <tr *ngFor="let user of users" class="table">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.created_at | date: 'MM/dd/yyyy'}}</td>
+            <td>{{user.last_login | date: 'MM/dd/yyyy'}}</td>
+        </tr>
+    </table>
+    <div class="pages">
+        <p>PAGES: </p>
+        <p *ngFor="let pageNum of getPages() let i = index" class="x">{{i+1}}</p>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="profile" >
+    <section class="info">
+        <p>Rami</p>
+        <p>rami.suliman=mail.ru</p>
+        <p>+79152085096</p>
+        <p>Moscow</p>
+    </section>
+    <section class="projects">
+        <app-project  *ngFor="let project of projects" 
+            [title]="project.title"
+            [link]="project.link"
+        />
+    </section>
+    <section class="skills">
+        GO
+    </section>
+</div>
